@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Treatments | Global Smile Care – Aesthetic Dentistry Antwerp</title>
+  <meta name="description" content="Discover our treatments: cosmetic dentistry, implantology, orthodontics, teeth whitening and preventive care – performed by specialists in Antwerp."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    .filter-pills { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:64px; }
+    .filter-pill { padding:9px 22px; border:1px solid var(--outline-dim); font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; background:transparent; color:var(--on-muted); cursor:pointer; transition:all 0.25s; }
+    .filter-pill.active,.filter-pill:hover { background:var(--gold); border-color:var(--gold); color:#1a1200; }
+    .treatment-block { display:grid; grid-template-columns:5fr 7fr; gap:80px; align-items:center; padding:80px 0; border-bottom:1px solid var(--outline-dim); }
+    .treatment-block:nth-child(even) { grid-template-columns:7fr 5fr; }
+    .treatment-block:nth-child(even) .treatment-block__img     { order:2; }
+    .treatment-block:nth-child(even) .treatment-block__content { order:1; }
+    .treatment-block:last-child { border-bottom:none; }
+    .treatment-block__img img { width:100%; aspect-ratio:4/3; object-fit:cover; filter:grayscale(0.8); transition:filter 0.6s; }
+    .treatment-block:hover .treatment-block__img img { filter:grayscale(0.2); }
+    .treatment-block__num { font-family:'EB Garamond',serif; font-size:120px; font-weight:300; color:var(--gold); opacity:0.06; position:absolute; right:-20px; bottom:-30px; line-height:1; user-select:none; }
+    .treatment-block__tag { color:var(--gold); margin-bottom:12px; display:block; }
+    .treatment-block__title { margin-bottom:20px; }
+    .treatment-block__body { color:var(--on-muted); font-size:16px; line-height:1.7; margin-bottom:28px; }
+    .bullet-list { margin-bottom:36px; }
+    .bullet-list li { display:flex; align-items:flex-start; gap:12px; font-size:13px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--on-muted); padding:8px 0; border-bottom:1px solid var(--outline-dim); }
+    .bullet-list li::before { content:''; display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0; margin-top:4px; }
+    .bullet-list li:last-child { border-bottom:none; }
+    @media (max-width:768px) {
+      .treatment-block,.treatment-block:nth-child(even) { grid-template-columns:1fr; gap:32px; padding:48px 0; }
+      .treatment-block:nth-child(even) .treatment-block__img,.treatment-block:nth-child(even) .treatment-block__content { order:0; }
+    }
+  </style>
+</head>
+<body data-page="treatments">
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></a>
+    <div class="nav__links">
+      <a href="behandelingen.html" class="nav__link active" data-i18n="nav.treatments">Treatments</a>
+      <a href="praktijk.html"      class="nav__link"        data-i18n="nav.practice">Our Practice</a>
+      <a href="team.html"          class="nav__link"        data-i18n="nav.team">Team</a>
+      <a href="journal.html"       class="nav__link"        data-i18n="nav.journal">Journal</a>
+      <a href="contact.html"       class="nav__link"        data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav__cta" data-i18n="nav.cta">Book Appointment</a>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile-menu">
+    <a href="behandelingen.html" class="nav__mobile-link" data-i18n="nav.treatments">Treatments</a>
+    <a href="praktijk.html"      class="nav__mobile-link" data-i18n="nav.practice">Our Practice</a>
+    <a href="team.html"          class="nav__mobile-link" data-i18n="nav.team">Team</a>
+    <a href="journal.html"       class="nav__mobile-link" data-i18n="nav.journal">Journal</a>
+    <a href="contact.html"       class="nav__mobile-link" data-i18n="nav.contact">Contact</a>
+    <div class="lang-switcher" style="width:fit-content;">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="justify-content:center; margin-top:8px;" data-i18n="nav.mobile.cta">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero" style="background:var(--bg-soft);">
+  <div class="page-hero__bg"><img src="assets/images/dental_clinic_interior.png" alt="Treatments background"/></div>
+  <div class="page-hero__content">
+    <div class="page-hero__breadcrumb">
+      <a href="index.html">Home</a><span class="sep">›</span>
+      <span data-i18n="tr.breadcrumb">Treatments</span>
+    </div>
+    <div class="gold-rule"></div>
+    <h1 class="font-display page-hero__title" data-i18n="tr.hero.title">Our treatments.</h1>
+    <p class="page-hero__sub" data-i18n="tr.hero.sub">A fusion of Belgian precision and London exclusivity. Discover our bespoke journeys for a timeless result.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter pills -->
+      <div class="filter-pills reveal">
+        <button class="filter-pill active" data-filter="all"          data-i18n="tr.filter.all">All</button>
+        <button class="filter-pill"        data-filter="prevention"   data-i18n="tr.filter.prevention">Prevention</button>
+        <button class="filter-pill"        data-filter="aesthetics"   data-i18n="tr.filter.aesthetics">Aesthetics</button>
+        <button class="filter-pill"        data-filter="orthodontics" data-i18n="tr.filter.orthodontics">Orthodontics</button>
+        <button class="filter-pill"        data-filter="implants"     data-i18n="tr.filter.implants">Implantology</button>
+      </div>
+
+      <!-- 01 Preventive -->
+      <div class="treatment-block reveal" data-category="prevention">
+        <div class="treatment-block__img bracket-frame" style="position:relative;">
+          <img src="assets/images/dental_clinic_interior.png" alt="Preventive Oral Care"/>
+          <div class="treatment-block__num">01</div>
+        </div>
+        <div class="treatment-block__content">
+          <span class="treatment-block__tag font-label" data-i18n="tr.1.tag">Prevention</span>
+          <h2 class="font-headline-xl treatment-block__title" data-i18n="tr.1.title">Preventive Oral Care</h2>
+          <p class="treatment-block__body" data-i18n="tr.1.body">The foundation of a lifelong healthy smile lies in meticulous prevention. In our studio we apply the 'Heritage' method, looking beyond the teeth to analyse the structural integrity and biological balance of your oral flora.</p>
+          <ul class="bullet-list">
+            <li data-i18n="tr.1.b1">Deep Cleaning &amp; Airflow Tech</li>
+            <li data-i18n="tr.1.b2">Microbiological Screening</li>
+            <li data-i18n="tr.1.b3">3D Structural Scan</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-icon" data-i18n="tr.1.cta">Book Consultation</a>
+        </div>
+      </div>
+
+      <!-- 02 Aesthetic -->
+      <div class="treatment-block reveal" data-category="aesthetics">
+        <div class="treatment-block__img bracket-frame" style="position:relative;">
+          <img src="assets/images/smile_whitening_portrait.png" alt="Aesthetic Reconstruction"/>
+          <div class="treatment-block__num">02</div>
+        </div>
+        <div class="treatment-block__content">
+          <span class="treatment-block__tag font-label" data-i18n="tr.2.tag">Aesthetics</span>
+          <h2 class="font-headline-xl treatment-block__title" data-i18n="tr.2.title">Aesthetic Reconstruction</h2>
+          <p class="treatment-block__body" data-i18n="tr.2.body">We don't create a standard smile — we design a unique character. Using Golden Ratio principles and digital Smile Design software, we harmonise your dentition with the natural contours of your face.</p>
+          <ul class="bullet-list">
+            <li data-i18n="tr.2.b1">Porcelain Facings (Hand-Layered)</li>
+            <li data-i18n="tr.2.b2">In-Office Bleaching (Laser Tech)</li>
+            <li data-i18n="tr.2.b3">Digital Smile Design Flow</li>
+          </ul>
+          <a href="tandenbleking.html" class="btn btn-ghost btn-icon" data-i18n="tr.2.cta">Explore Design</a>
+        </div>
+      </div>
+
+      <!-- 03 Implantology -->
+      <div class="treatment-block reveal" data-category="implants">
+        <div class="treatment-block__img bracket-frame" style="position:relative;">
+          <img src="assets/images/dental_implant_hero.png" alt="High-End Implantology"/>
+          <div class="treatment-block__num">03</div>
+        </div>
+        <div class="treatment-block__content">
+          <span class="treatment-block__tag font-label" data-i18n="tr.3.tag">Implantology</span>
+          <h2 class="font-headline-xl treatment-block__title" data-i18n="tr.3.title">High-End Implantology</h2>
+          <p class="treatment-block__body" data-i18n="tr.3.body">Permanent solutions with the highest biological compatibility. Our specialists use computer-guided navigation for flawless placement and a natural recovery process.</p>
+          <ul class="bullet-list">
+            <li data-i18n="tr.3.b1">Titanium &amp; Zirconia Options</li>
+            <li data-i18n="tr.3.b2">Guided Surgery (3D Navigation)</li>
+            <li data-i18n="tr.3.b3">Immediate Loading Trajectories</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-icon" data-i18n="tr.3.cta">More Information</a>
+        </div>
+      </div>
+
+      <!-- 04 Orthodontics -->
+      <div class="treatment-block reveal" data-category="orthodontics">
+        <div class="treatment-block__img bracket-frame" style="position:relative;">
+          <img src="assets/images/orthodontic_aligners.png" alt="Invisible Orthodontics"/>
+          <div class="treatment-block__num">04</div>
+        </div>
+        <div class="treatment-block__content">
+          <span class="treatment-block__tag font-label" data-i18n="tr.4.tag">Orthodontics</span>
+          <h2 class="font-headline-xl treatment-block__title" data-i18n="tr.4.title">Invisible Orthodontics</h2>
+          <p class="treatment-block__body" data-i18n="tr.4.body">Our orthodontic approach combines digital planning with discreet solutions for both adults and adolescents. Discretion and functionality go hand in hand.</p>
+          <ul class="bullet-list">
+            <li data-i18n="tr.4.b1">Invisalign Certified</li>
+            <li data-i18n="tr.4.b2">3D Orthodontic Planning</li>
+            <li data-i18n="tr.4.b3">Retention &amp; Aftercare Protocol</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-icon" data-i18n="tr.4.cta">Discover Invisalign</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band__inner">
+      <div>
+        <div class="cta-band__title" data-i18n="tr.cta.title">Ready for your new smile?</div>
+        <div class="cta-band__sub"   data-i18n="tr.cta.sub">Plan your consultation today</div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" data-i18n="tr.cta.btn">Book Online</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></div>
+      <p class="footer__tagline" data-i18n="footer.tagline">Excellence in aesthetic and functional dentistry.</p>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col1">Practice</div>
+      <a href="behandelingen.html" class="footer__link" data-i18n="footer.link.treatments">Treatments</a>
+      <a href="praktijk.html"      class="footer__link" data-i18n="footer.link.practice">Our Practice</a>
+      <a href="team.html"          class="footer__link" data-i18n="footer.link.team">Team</a>
+      <a href="journal.html"       class="footer__link" data-i18n="footer.link.journal">Journal</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col3">Contact</div>
+      <p class="footer__link" style="cursor:default;">Tolstraat 40, 2000 Antwerpen</p>
+      <a href="tel:+3231234567" class="footer__link">+32 3 123 45 67</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col2">Legal</div>
+      <a href="#" class="footer__link" data-i18n="footer.link.privacy">Privacy Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.terms">Terms of Service</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.cookies">Cookie Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.access">Accessibility</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy" data-i18n="footer.copy">© 2024 Global Smile Care. All rights reserved.</p>
+    <div class="footer__socials">
+      <a href="#" class="footer__social">Instagram</a>
+      <a href="#" class="footer__social">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/translations.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

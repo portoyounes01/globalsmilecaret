@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Practice | Global Smile Care – Dental Practice Antwerp-South</title>
+  <meta name="description" content="Discover the Global Smile Care practice in Antwerp-South. State-of-the-art facilities, RIZIV-certified, with digital diagnostics and laser therapy."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    .facility-card { background:var(--surface); border:1px solid var(--outline-dim); padding:36px 32px; transition:border-color 0.3s,background 0.3s; }
+    .facility-card:hover { border-color:var(--gold); background:var(--surface-mid); }
+    .facility-card__icon { color:var(--gold); font-size:28px; margin-bottom:20px; display:block; }
+    .facility-card__title { margin-bottom:10px; font-size:18px; font-family:'EB Garamond',serif; font-weight:600; }
+    .facility-card__body  { color:var(--on-muted); font-size:14px; line-height:1.6; }
+    .hours-table { width:100%; border-collapse:collapse; }
+    .hours-table tr { border-bottom:1px solid var(--outline-dim); }
+    .hours-table tr:last-child { border-bottom:none; }
+    .hours-table td { padding:12px 0; font-size:15px; }
+    .hours-table td:first-child { color:var(--on-muted); }
+    .hours-table td:last-child  { color:var(--on-bg); text-align:right; }
+    .hours-table .closed { color:var(--outline); }
+    .riziv-box { background:var(--surface); border:1px solid var(--outline-dim); border-left:3px solid var(--gold); padding:32px 28px; }
+    .riziv-box__title { font-family:'EB Garamond',serif; font-size:20px; font-weight:600; margin-bottom:12px; color:var(--gold); }
+    .riziv-box__body  { font-size:14px; line-height:1.7; color:var(--on-muted); margin-bottom:20px; }
+    .philosophy-quote { text-align:center; max-width:800px; margin:0 auto; padding:80px var(--pad-x); }
+    .philosophy-quote blockquote { font-family:'EB Garamond',serif; font-size:clamp(22px,3vw,36px); font-weight:300; font-style:italic; line-height:1.5; color:var(--gold); }
+    .philosophy-quote cite { display:block; margin-top:20px; font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--outline); }
+  </style>
+</head>
+<body data-page="practice">
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></a>
+    <div class="nav__links">
+      <a href="behandelingen.html" class="nav__link"        data-i18n="nav.treatments">Treatments</a>
+      <a href="praktijk.html"      class="nav__link active" data-i18n="nav.practice">Our Practice</a>
+      <a href="team.html"          class="nav__link"        data-i18n="nav.team">Team</a>
+      <a href="journal.html"       class="nav__link"        data-i18n="nav.journal">Journal</a>
+      <a href="contact.html"       class="nav__link"        data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav__cta" data-i18n="nav.cta">Book Appointment</a>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile-menu">
+    <a href="behandelingen.html" class="nav__mobile-link" data-i18n="nav.treatments">Treatments</a>
+    <a href="praktijk.html"      class="nav__mobile-link" data-i18n="nav.practice">Our Practice</a>
+    <a href="team.html"          class="nav__mobile-link" data-i18n="nav.team">Team</a>
+    <a href="journal.html"       class="nav__mobile-link" data-i18n="nav.journal">Journal</a>
+    <a href="contact.html"       class="nav__mobile-link" data-i18n="nav.contact">Contact</a>
+    <div class="lang-switcher" style="width:fit-content;">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="justify-content:center; margin-top:8px;" data-i18n="nav.mobile.cta">Book Appointment</a>
+  </div>
+</nav>
+
+<header class="page-hero" style="min-height:52svh;">
+  <div class="page-hero__bg"><img src="assets/images/dental_clinic_interior.png" alt="Practice interior"/></div>
+  <div class="page-hero__content">
+    <div class="page-hero__breadcrumb">
+      <a href="index.html">Home</a><span class="sep">›</span>
+      <span data-i18n="pr.breadcrumb">Our Practice</span>
+    </div>
+    <span class="gold-rule"></span>
+    <h1 class="font-display page-hero__title" data-i18n-html="pr.hero.title">Your dental practice<br/>in Antwerp-South.</h1>
+    <p class="page-hero__sub" data-i18n="pr.hero.sub">A beacon of calm and medical precision in the heart of Antwerp. Where heritage and innovation unite for your smile.</p>
+  </div>
+</header>
+
+<main>
+  <section style="background:var(--bg-soft); border-bottom:1px solid var(--outline-dim);">
+    <div class="philosophy-quote reveal">
+      <blockquote data-i18n="pr.quote">"We believe that dentistry is not merely a medical necessity, but an essential part of your personal wellbeing and self-confidence."</blockquote>
+      <cite data-i18n="pr.quote.cite">— Our Philosophy</cite>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split" style="gap:80px; align-items:start;">
+        <div class="reveal">
+          <span class="gold-rule"></span>
+          <h2 class="font-headline-xl" style="margin-bottom:24px;" data-i18n="pr.intro.title">A practice built on trust.</h2>
+          <p class="font-body-lg text-muted" style="margin-bottom:20px;" data-i18n="pr.intro.p1">Our practice in Antwerp-South is designed as a place of calm. In a world that moves ever faster, we take the time for an in-depth analysis of your dental health.</p>
+          <p class="font-body-md text-dim" style="margin-bottom:20px;" data-i18n="pr.intro.p2">Every treatment plan is unique, carefully tailored to your aesthetic and functional needs. We uphold the highest standards of clinical excellence.</p>
+          <p class="font-body-md text-dim" style="margin-bottom:40px;" data-i18n="pr.intro.p3">From preventive care to complex aesthetic reconstructions — at Global Smile Care you embark on a journey to a smile that elevates craftsmanship to an art form.</p>
+          <a href="team.html" class="btn btn-ghost btn-icon" data-i18n="pr.intro.btn">Our Team</a>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="bracket-frame">
+            <img src="assets/images/dental_clinic_interior.png" alt="Practice interior" style="width:100%; aspect-ratio:4/5; object-fit:cover; filter:grayscale(0.7);"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <div style="margin-bottom:52px;" class="reveal">
+        <h2 class="font-headline-xl" style="margin-bottom:16px;" data-i18n="pr.fac.title">Facilities &amp; Technology</h2>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="grid-3" style="gap:2px;">
+        <div class="facility-card reveal"><span class="facility-card__icon">🔬</span><h3 class="facility-card__title" data-i18n="pr.fac1.title">Digital Diagnostics</h3><p class="facility-card__body" data-i18n="pr.fac1.body">3D scanning and digital radiography for precisely fitting prostheses and flawless implant placement.</p></div>
+        <div class="facility-card reveal reveal-delay-1"><span class="facility-card__icon">✦</span><h3 class="facility-card__title" data-i18n="pr.fac2.title">Laser Therapy</h3><p class="facility-card__body" data-i18n="pr.fac2.body">Minimally invasive techniques for faster healing and maximum comfort at every procedure.</p></div>
+        <div class="facility-card reveal reveal-delay-2"><span class="facility-card__icon">🛡</span><h3 class="facility-card__title" data-i18n="pr.fac3.title">Sterilisation Hub</h3><p class="facility-card__body" data-i18n="pr.fac3.body">A strictly controlled environment meeting the highest medical hygiene standards in Europe.</p></div>
+        <div class="facility-card reveal reveal-delay-1"><span class="facility-card__icon">🦷</span><h3 class="facility-card__title" data-i18n="pr.fac4.title">CAD/CAM Studio</h3><p class="facility-card__body" data-i18n="pr.fac4.body">In-house digital crowns and facings in a single session. No temporary restorations — direct perfection.</p></div>
+        <div class="facility-card reveal reveal-delay-2"><span class="facility-card__icon">📡</span><h3 class="facility-card__title" data-i18n="pr.fac5.title">3D Smile Design</h3><p class="facility-card__body" data-i18n="pr.fac5.body">You see your new smile before treatment even begins, via our digital visualisation technology.</p></div>
+        <div class="facility-card reveal reveal-delay-3"><span class="facility-card__icon">♿</span><h3 class="facility-card__title" data-i18n="pr.fac6.title">Accessibility</h3><p class="facility-card__body" data-i18n="pr.fac6.body">Our practice is fully step-free and accessible for patients with limited mobility. Always.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="margin-bottom:52px;" class="reveal">
+        <h2 class="font-headline-xl" style="margin-bottom:16px;" data-i18n="pr.info.title">Practical Information</h2>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="split" style="gap:64px; align-items:start;">
+        <div class="reveal">
+          <div style="display:flex;gap:24px;margin-bottom:40px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="flex-shrink:0;margin-top:3px;"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0z"/></svg>
+            <div>
+              <div class="font-label text-gold" style="margin-bottom:8px;" data-i18n="pr.location.label">Location</div>
+              <address class="font-body-md text-muted">Tolstraat 40<br/>2000 Antwerpen, België</address>
+            </div>
+          </div>
+          <div style="display:flex;gap:24px;margin-bottom:40px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="flex-shrink:0;margin-top:3px;"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"/></svg>
+            <div>
+              <div class="font-label text-gold" style="margin-bottom:8px;" data-i18n="pr.contact.label">Contact</div>
+              <p class="font-body-md text-muted">+32 (0) 3 123 45 67<br/>info@globalsmilecare.be</p>
+            </div>
+          </div>
+          <div class="font-label text-gold" style="margin-bottom:20px;" data-i18n="pr.hours.label">Opening Hours</div>
+          <table class="hours-table">
+            <tr><td data-i18n="pr.hours.mon">Monday</td>   <td>08:30 — 18:30</td></tr>
+            <tr><td data-i18n="pr.hours.tue">Tuesday</td>  <td>08:30 — 18:30</td></tr>
+            <tr><td data-i18n="pr.hours.wed">Wednesday</td><td>09:00 — 17:00</td></tr>
+            <tr><td data-i18n="pr.hours.thu">Thursday</td> <td>08:30 — 19:00</td></tr>
+            <tr><td data-i18n="pr.hours.fri">Friday</td>   <td>08:30 — 16:30</td></tr>
+            <tr><td data-i18n="pr.hours.sat">Saturday</td> <td>09:00 — 13:00</td></tr>
+            <tr><td data-i18n="pr.hours.sun">Sunday</td>   <td class="closed" data-i18n="pr.hours.closed">Closed</td></tr>
+          </table>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="riziv-box">
+            <div class="riziv-box__title" data-i18n="pr.riziv.title">Insurance &amp; RIZIV</div>
+            <p class="riziv-box__body" data-i18n="pr.riziv.p1">Global Smile Care is a non-conventioned practice. We consciously choose this status in order to invest in the high-quality materials, advanced technologies and extra time required for superior care.</p>
+            <p class="riziv-box__body" data-i18n="pr.riziv.p2">Our fees reflect the expertise and premium service we provide. We always give you a detailed cost estimate and the necessary certificates for your health insurer or supplementary dental insurance.</p>
+            <a href="contact.html" class="btn btn-ghost btn-icon" style="font-size:11px;" data-i18n="pr.riziv.btn">About Our Fees</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band__inner">
+      <div>
+        <div class="cta-band__title" data-i18n="pr.cta.title">Visit our studio</div>
+        <div class="cta-band__sub"   data-i18n="pr.cta.sub">Plan a tour or book your first consultation appointment</div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" data-i18n="pr.cta.btn">Plan an Appointment</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></div>
+      <p class="footer__tagline" data-i18n="footer.tagline">Excellence in aesthetic dentistry in Antwerp-South.</p>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col1">Practice</div>
+      <a href="behandelingen.html" class="footer__link" data-i18n="footer.link.treatments">Treatments</a>
+      <a href="praktijk.html"      class="footer__link" data-i18n="footer.link.practice">Our Practice</a>
+      <a href="team.html"          class="footer__link" data-i18n="footer.link.team">Team</a>
+      <a href="journal.html"       class="footer__link" data-i18n="footer.link.journal">Journal</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col2">Legal</div>
+      <a href="#" class="footer__link" data-i18n="footer.link.privacy">Privacy Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.terms">Terms of Service</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.cookies">Cookie Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.access">Accessibility</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col4">Social</div>
+      <a href="#" class="footer__link">Instagram</a>
+      <a href="#" class="footer__link">LinkedIn</a>
+      <a href="#" class="footer__link">Facebook</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy" data-i18n="footer.copy">© 2024 Global Smile Care. All rights reserved.</p>
+    <div class="footer__socials">
+      <a href="#" class="footer__social">Instagram</a>
+      <a href="#" class="footer__social">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/translations.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

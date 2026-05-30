@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team | Global Smile Care – Dental Specialists Antwerp</title>
+  <meta name="description" content="Meet the team at Global Smile Care: certified specialists in aesthetic dentistry, implantology and orthodontics in Antwerp."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    .team-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:64px 48px; }
+    .values-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:0; background:var(--bg-soft); border-top:1px solid var(--outline-dim); border-bottom:1px solid var(--outline-dim); }
+    .value-block { padding:52px 44px; border-right:1px solid var(--outline-dim); }
+    .value-block:last-child { border-right:none; }
+    .value-block__tag { color:var(--gold); margin-bottom:12px; display:block; }
+    .value-block__title { font-family:'EB Garamond',serif; font-size:clamp(18px,2vw,24px); font-weight:600; font-style:italic; line-height:1.3; color:var(--on-muted); }
+    @media (max-width:768px) {
+      .team-grid { grid-template-columns:1fr; gap:48px; }
+      .values-strip { grid-template-columns:1fr; }
+      .value-block { border-right:none; border-bottom:1px solid var(--outline-dim); }
+      .value-block:last-child { border-bottom:none; }
+    }
+  </style>
+</head>
+<body data-page="team">
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></a>
+    <div class="nav__links">
+      <a href="behandelingen.html" class="nav__link"        data-i18n="nav.treatments">Treatments</a>
+      <a href="praktijk.html"      class="nav__link"        data-i18n="nav.practice">Our Practice</a>
+      <a href="team.html"          class="nav__link active" data-i18n="nav.team">Team</a>
+      <a href="journal.html"       class="nav__link"        data-i18n="nav.journal">Journal</a>
+      <a href="contact.html"       class="nav__link"        data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav__cta" data-i18n="nav.cta">Book Appointment</a>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile-menu">
+    <a href="behandelingen.html" class="nav__mobile-link" data-i18n="nav.treatments">Treatments</a>
+    <a href="praktijk.html"      class="nav__mobile-link" data-i18n="nav.practice">Our Practice</a>
+    <a href="team.html"          class="nav__mobile-link" data-i18n="nav.team">Team</a>
+    <a href="journal.html"       class="nav__mobile-link" data-i18n="nav.journal">Journal</a>
+    <a href="contact.html"       class="nav__mobile-link" data-i18n="nav.contact">Contact</a>
+    <div class="lang-switcher" style="width:fit-content;">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="justify-content:center; margin-top:8px;" data-i18n="nav.mobile.cta">Book Appointment</a>
+  </div>
+</nav>
+
+<header style="padding-top:76px; background:var(--bg-soft); border-bottom:1px solid var(--outline-dim);">
+  <div class="container" style="padding-top:80px; padding-bottom:72px;">
+    <div class="page-hero__breadcrumb">
+      <a href="index.html">Home</a><span class="sep">›</span>
+      <span data-i18n="tm.breadcrumb">Team</span>
+    </div>
+    <span class="gold-rule reveal"></span>
+    <h1 class="font-display reveal" style="margin-bottom:16px;" data-i18n="tm.hero.title">Our team.</h1>
+    <p class="reveal reveal-delay-1" style="color:var(--gold); font-family:'EB Garamond',serif; font-style:italic; font-size:22px; font-weight:400;" data-i18n="tm.hero.sub">The architects of your smile.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="background:#f5f3ef;">
+    <div class="container">
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-card__img">
+            <img src="assets/images/doctor_portrait_male.png" alt="Dr. Alexander Van de Velde"/>
+            <div class="team-card__bracket"></div>
+          </div>
+          <span class="team-card__role font-label" style="color:var(--gold-dim);" data-i18n="tm.dr1.role">Head of Implantology &amp; Aesthetics</span>
+          <h2 class="team-card__name font-headline-lg" style="color:#1a1200;" data-i18n="tm.dr1.name">Dr. Alexander Van de Velde</h2>
+          <div style="display:flex;gap:8px;margin-bottom:16px;">
+            <span style="background:rgba(184,150,62,0.12);color:var(--gold-dim);font-size:10px;letter-spacing:0.1em;padding:4px 10px;text-transform:uppercase;font-weight:600;">★★★★★</span>
+          </div>
+          <p class="team-card__bio" style="color:#444;" data-i18n="tm.dr1.bio">With over twenty years of experience in aesthetic dentistry, Dr. Van de Velde combines surgical precision with an eye for natural beauty. Specialised in complex restorations and facings.</p>
+          <p class="team-card__langs" style="color:var(--outline-dim);"><span data-i18n="tm.dr1.langs">NL · EN · FR</span> &nbsp;|&nbsp; RIZIV: 1-04301-01-001</p>
+        </div>
+        <div class="team-card reveal reveal-delay-2" style="margin-top:40px;">
+          <div class="team-card__img">
+            <img src="assets/images/doctor_portrait_female.png" alt="Drs. Sophie Dumont"/>
+            <div class="team-card__bracket"></div>
+          </div>
+          <span class="team-card__role font-label" style="color:var(--gold-dim);" data-i18n="tm.dr2.role">Orthodontics Specialist</span>
+          <h2 class="team-card__name font-headline-lg" style="color:#1a1200;" data-i18n="tm.dr2.name">Drs. Sophie Dumont</h2>
+          <div style="display:flex;gap:8px;margin-bottom:16px;">
+            <span style="background:rgba(184,150,62,0.12);color:var(--gold-dim);font-size:10px;letter-spacing:0.1em;padding:4px 10px;text-transform:uppercase;font-weight:600;">★★★★★</span>
+          </div>
+          <p class="team-card__bio" style="color:#444;" data-i18n="tm.dr2.bio">Dr. Dumont is an expert in invisible orthodontics and craniofacial development. Her approach focuses on harmony between function and aesthetics, using the most advanced digital techniques.</p>
+          <p class="team-card__langs" style="color:var(--outline-dim);"><span data-i18n="tm.dr2.langs">NL · EN · IT</span> &nbsp;|&nbsp; RIZIV: 1-04801-12-004</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="values-strip">
+    <div class="value-block reveal">
+      <span class="value-block__tag font-label" data-i18n="tm.val1.tag">Heritage</span>
+      <p class="value-block__title" data-i18n="tm.val1.quote">"Clinical excellence rooted in tradition."</p>
+    </div>
+    <div class="value-block reveal reveal-delay-2">
+      <span class="value-block__tag font-label" data-i18n="tm.val2.tag">Innovation</span>
+      <p class="value-block__title" data-i18n="tm.val2.quote">"Digital precision for natural aesthetics."</p>
+    </div>
+    <div class="value-block reveal reveal-delay-3">
+      <span class="value-block__tag font-label" data-i18n="tm.val3.tag">Integrity</span>
+      <p class="value-block__title" data-i18n="tm.val3.quote">"Bespoke care, tailored to your unique story."</p>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="cta-band__inner">
+      <div>
+        <div class="cta-band__title" data-i18n="tm.cta.title">Meet our team</div>
+        <div class="cta-band__sub"   data-i18n="tm.cta.sub">Book a personal consultation in our studio</div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" data-i18n="tm.cta.btn">Plan an Appointment</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></div>
+      <p class="footer__tagline" data-i18n="footer.tagline">Excellence in aesthetic and functional dentistry.</p>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col1">Practice</div>
+      <a href="behandelingen.html" class="footer__link" data-i18n="footer.link.treatments">Treatments</a>
+      <a href="praktijk.html"      class="footer__link" data-i18n="footer.link.practice">Our Practice</a>
+      <a href="team.html"          class="footer__link" data-i18n="footer.link.team">Team</a>
+      <a href="journal.html"       class="footer__link" data-i18n="footer.link.journal">Journal</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col2">Legal</div>
+      <a href="#" class="footer__link" data-i18n="footer.link.privacy">Privacy Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.terms">Terms of Service</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.cookies">Cookie Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.access">Accessibility</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col3">Contact</div>
+      <p class="footer__link" style="cursor:default;">Tolstraat 40, 2000 Antwerpen</p>
+      <a href="tel:+3231234567"            class="footer__link">+32 (0) 3 123 45 67</a>
+      <a href="mailto:info@globalsmilecare.be" class="footer__link">info@globalsmilecare.be</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy" data-i18n="footer.copy">© 2024 Global Smile Care. All rights reserved.</p>
+    <div class="footer__socials">
+      <a href="#" class="footer__social">Instagram</a>
+      <a href="#" class="footer__social">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/translations.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

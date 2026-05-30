@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Journal & Insights | Global Smile Care – Aesthetic Dentistry</title>
+  <meta name="description" content="Read our journal on aesthetic dentistry, clinical innovations, lifestyle and oral health. Written by the specialists at Global Smile Care."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    .journal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; }
+    .journal-featured { grid-column:1/-1; display:grid; grid-template-columns:7fr 5fr; gap:0; border:1px solid var(--outline-dim); overflow:hidden; margin-bottom:16px; cursor:pointer; transition:border-color 0.3s; }
+    .journal-featured:hover { border-color:var(--gold); }
+    .journal-featured__img { overflow:hidden; }
+    .journal-featured__img img { width:100%; height:100%; min-height:360px; object-fit:cover; filter:grayscale(0.85); transition:filter 0.6s,transform 0.8s; }
+    .journal-featured:hover .journal-featured__img img { filter:grayscale(0.2); transform:scale(1.03); }
+    .journal-featured__content { padding:52px 44px; display:flex; flex-direction:column; justify-content:center; background:var(--surface); }
+    .journal-featured__tag { color:var(--gold); margin-bottom:12px; display:block; }
+    .journal-featured__title { margin-bottom:20px; transition:color 0.25s; }
+    .journal-featured:hover .journal-featured__title { color:var(--gold); }
+    .journal-featured__body { color:var(--on-muted); font-size:15px; line-height:1.7; margin-bottom:32px; flex-grow:1; }
+    .newsletter { background:var(--surface-mid); border-top:1px solid var(--outline-dim); border-bottom:1px solid var(--outline-dim); padding:var(--section-y) 0; }
+    .newsletter__inner { max-width:var(--container); margin:0 auto; padding:0 var(--pad-x); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .filter-pill { padding:9px 22px; border:1px solid var(--outline-dim); font-size:11px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; background:transparent; color:var(--on-muted); cursor:pointer; transition:all 0.25s; }
+    .filter-pill.active,.filter-pill:hover { background:var(--gold); border-color:var(--gold); color:#1a1200; }
+    @media (max-width:900px) { .journal-grid { grid-template-columns:1fr 1fr; } .journal-featured { grid-template-columns:1fr; } .journal-featured__img img { min-height:260px; } .newsletter__inner { grid-template-columns:1fr; gap:40px; } }
+    @media (max-width:600px) { .journal-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body data-page="journal">
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></a>
+    <div class="nav__links">
+      <a href="behandelingen.html" class="nav__link"        data-i18n="nav.treatments">Treatments</a>
+      <a href="praktijk.html"      class="nav__link"        data-i18n="nav.practice">Our Practice</a>
+      <a href="team.html"          class="nav__link"        data-i18n="nav.team">Team</a>
+      <a href="journal.html"       class="nav__link active" data-i18n="nav.journal">Journal</a>
+      <a href="contact.html"       class="nav__link"        data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav__cta" data-i18n="nav.cta">Book Appointment</a>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile-menu">
+    <a href="behandelingen.html" class="nav__mobile-link" data-i18n="nav.treatments">Treatments</a>
+    <a href="praktijk.html"      class="nav__mobile-link" data-i18n="nav.practice">Our Practice</a>
+    <a href="team.html"          class="nav__mobile-link" data-i18n="nav.team">Team</a>
+    <a href="journal.html"       class="nav__mobile-link" data-i18n="nav.journal">Journal</a>
+    <a href="contact.html"       class="nav__mobile-link" data-i18n="nav.contact">Contact</a>
+    <div class="lang-switcher" style="width:fit-content;">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="justify-content:center; margin-top:8px;" data-i18n="nav.mobile.cta">Book Appointment</a>
+  </div>
+</nav>
+
+<header style="padding-top:76px; background:var(--bg-soft); border-bottom:1px solid var(--outline-dim);">
+  <div class="container" style="padding-top:80px; padding-bottom:64px;">
+    <span class="gold-rule reveal"></span>
+    <h1 class="font-display reveal" style="margin-bottom:20px;" data-i18n="jo.hero.title">Journal &amp; Insights</h1>
+    <p class="reveal reveal-delay-1" style="color:var(--on-muted); font-size:16px; max-width:520px; line-height:1.6;" data-i18n="jo.hero.sub">An archive of clinical excellence, innovative aesthetics and the art of a healthy smile. Written by our specialists.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:52px;" class="reveal">
+        <button class="filter-pill active" data-filter="all"        data-i18n="jo.filter.all">All</button>
+        <button class="filter-pill"        data-filter="klinisch"   data-i18n="jo.filter.clinical">Clinical</button>
+        <button class="filter-pill"        data-filter="esthetiek"  data-i18n="jo.filter.aesthetics">Aesthetics</button>
+        <button class="filter-pill"        data-filter="lifestyle"  data-i18n="jo.filter.lifestyle">Lifestyle</button>
+        <button class="filter-pill"        data-filter="innovatie"  data-i18n="jo.filter.innovation">Innovation</button>
+      </div>
+
+      <article class="journal-featured reveal" data-category="klinisch">
+        <div class="journal-featured__img"><img src="assets/images/dental_clinic_interior.png" alt="Digital Smile Architecture"/></div>
+        <div class="journal-featured__content">
+          <div class="gold-rule"></div>
+          <span class="journal-featured__tag font-label" data-i18n="jo.feat.cat">Clinical</span>
+          <h2 class="journal-featured__title font-headline-xl" data-i18n="jo.feat.title">The Evolution of Digital Smile Architecture</h2>
+          <p class="journal-featured__body" data-i18n="jo.feat.body">How advanced 3D modelling and AI-driven analysis are redefining the standard for aesthetic restorations in our studio. An in-depth look at the process behind your new smile.</p>
+          <a href="#" class="btn-text font-label" data-i18n="jo.feat.link">Read more →</a>
+        </div>
+      </article>
+
+      <div class="journal-grid">
+        <article class="journal-card reveal" data-category="esthetiek">
+          <div class="journal-card__img"><img src="assets/images/veneer_closeup.png" alt="Veneers article"/></div>
+          <span class="journal-card__cat font-label" data-i18n="jo.art1.cat">Aesthetics</span>
+          <h3 class="journal-card__title font-headline-md" data-i18n="jo.art1.title">Veneers: The Balance Between Nature and Perfection</h3>
+          <p class="journal-card__body" data-i18n="jo.art1.body">A deep dive into the hand-crafted process behind our signature porcelain veneers, where every detail is aligned with your facial features.</p>
+          <a href="#" class="btn-text font-label" style="margin-top:16px; display:inline-flex;" data-i18n="jo.art1.link">Read more →</a>
+        </article>
+        <article class="journal-card reveal reveal-delay-1" data-category="lifestyle">
+          <div class="journal-card__img"><img src="assets/images/smile_whitening_portrait.png" alt="Oral health article"/></div>
+          <span class="journal-card__cat font-label" data-i18n="jo.art2.cat">Lifestyle</span>
+          <h3 class="journal-card__title font-headline-md" data-i18n="jo.art2.title">The Impact of Oral Health on Wellbeing</h3>
+          <p class="journal-card__body" data-i18n="jo.art2.body">Why a holistic approach to dentistry is essential for your overall health and confidence in daily life.</p>
+          <a href="#" class="btn-text font-label" style="margin-top:16px; display:inline-flex;" data-i18n="jo.art2.link">Read more →</a>
+        </article>
+        <article class="journal-card reveal reveal-delay-2" data-category="innovatie">
+          <div class="journal-card__img"><img src="assets/images/dental_implant_hero.png" alt="Implantology article"/></div>
+          <span class="journal-card__cat font-label" data-i18n="jo.art3.cat">Innovation</span>
+          <h3 class="journal-card__title font-headline-md" data-i18n="jo.art3.title">Guided Surgery: The Future of Implantology</h3>
+          <p class="journal-card__body" data-i18n="jo.art3.body">Computer-guided navigation makes implant placement more precise than ever. Discover how this technology is transforming our work.</p>
+          <a href="#" class="btn-text font-label" style="margin-top:16px; display:inline-flex;" data-i18n="jo.art3.link">Read more →</a>
+        </article>
+      </div>
+
+      <div style="text-align:center; margin-top:52px;" class="reveal">
+        <button class="btn btn-ghost" data-i18n="jo.loadmore">View More Articles</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="newsletter__inner">
+      <div class="reveal">
+        <span class="gold-rule"></span>
+        <h2 class="font-headline-xl" style="margin-bottom:20px;" data-i18n="jo.nl.title">Receive our quarterly edition</h2>
+        <p class="text-muted font-body-md" data-i18n="jo.nl.sub">Exclusive insights on aesthetic dentistry and studio updates, straight to your inbox. No noise — only expertise.</p>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <form onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <label class="form-label" for="nl-email" data-i18n="jo.nl.label">Email Address</label>
+            <input id="nl-email" type="email" class="form-input" data-i18n-placeholder="jo.nl.placeholder" placeholder="your@email.com" required/>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="jo.nl.btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></div>
+      <p class="footer__tagline" data-i18n="footer.tagline">Excellence in aesthetic and functional dentistry.</p>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col1">Practice</div>
+      <a href="behandelingen.html" class="footer__link" data-i18n="footer.link.treatments">Treatments</a>
+      <a href="praktijk.html"      class="footer__link" data-i18n="footer.link.practice">Our Practice</a>
+      <a href="team.html"          class="footer__link" data-i18n="footer.link.team">Team</a>
+      <a href="journal.html"       class="footer__link" data-i18n="footer.link.journal">Journal</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col2">Legal</div>
+      <a href="#" class="footer__link" data-i18n="footer.link.privacy">Privacy Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.terms">Terms of Service</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.cookies">Cookie Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.access">Accessibility</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col3">Contact</div>
+      <p class="footer__link" style="cursor:default;">Tolstraat 40, 2000 Antwerpen</p>
+      <a href="tel:+3231234567" class="footer__link">+32 (0) 3 123 45 67</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy" data-i18n="footer.copy">© 2024 Global Smile Care. All rights reserved.</p>
+    <div class="footer__socials">
+      <a href="#" class="footer__social">Instagram</a>
+      <a href="#" class="footer__social">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/translations.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

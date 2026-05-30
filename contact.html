@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact & Appointment | Global Smile Care – Private Dental Practice Antwerp</title>
+  <meta name="description" content="Book an appointment at Global Smile Care in Antwerp. New and existing patients welcome. Call us, send an email or fill in the contact form."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    .patient-selector { display:grid; grid-template-columns:1fr 1fr; gap:0; margin-bottom:40px; border:1px solid var(--outline-dim); }
+    .patient-type { padding:24px 28px; cursor:pointer; border:none; background:transparent; color:var(--on-muted); text-align:left; border-right:1px solid var(--outline-dim); transition:background 0.3s,color 0.3s; }
+    .patient-type:last-child { border-right:none; }
+    .patient-type.active,.patient-type:hover { background:var(--surface-hi); color:var(--on-bg); }
+    .patient-type.active { border-bottom:2px solid var(--gold); }
+    .patient-type__label { font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:4px; }
+    .patient-type__title { font-family:'EB Garamond',serif; font-size:18px; font-weight:600; }
+    .info-card { display:flex; gap:20px; align-items:flex-start; padding:28px 0; border-bottom:1px solid var(--outline-dim); }
+    .info-card:last-child { border-bottom:none; }
+    .info-card__icon { color:var(--gold); flex-shrink:0; margin-top:2px; }
+    .info-card__label { font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:6px; }
+    .info-card__content { font-size:15px; line-height:1.6; color:var(--on-muted); }
+    .info-card__content a { color:var(--on-muted); transition:color 0.25s; }
+    .info-card__content a:hover { color:var(--gold); }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:32px; }
+    @media (max-width:768px) { .patient-selector { grid-template-columns:1fr; } .patient-type { border-right:none; border-bottom:1px solid var(--outline-dim); } .form-row { grid-template-columns:1fr; gap:0; } }
+  </style>
+</head>
+<body data-page="contact">
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></a>
+    <div class="nav__links">
+      <a href="behandelingen.html" class="nav__link"        data-i18n="nav.treatments">Treatments</a>
+      <a href="praktijk.html"      class="nav__link"        data-i18n="nav.practice">Our Practice</a>
+      <a href="team.html"          class="nav__link"        data-i18n="nav.team">Team</a>
+      <a href="journal.html"       class="nav__link"        data-i18n="nav.journal">Journal</a>
+      <a href="contact.html"       class="nav__link active" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav__cta" data-i18n="nav.cta">Book Appointment</a>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile-menu">
+    <a href="behandelingen.html" class="nav__mobile-link" data-i18n="nav.treatments">Treatments</a>
+    <a href="praktijk.html"      class="nav__mobile-link" data-i18n="nav.practice">Our Practice</a>
+    <a href="team.html"          class="nav__mobile-link" data-i18n="nav.team">Team</a>
+    <a href="journal.html"       class="nav__mobile-link" data-i18n="nav.journal">Journal</a>
+    <a href="contact.html"       class="nav__mobile-link" data-i18n="nav.contact">Contact</a>
+    <div class="lang-switcher" style="width:fit-content;">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="justify-content:center; margin-top:8px;" data-i18n="nav.mobile.cta">Book Appointment</a>
+  </div>
+</nav>
+
+<header style="padding-top:76px; background:var(--bg-soft); border-bottom:1px solid var(--outline-dim);">
+  <div class="container" style="padding-top:64px; padding-bottom:56px;">
+    <span class="gold-rule reveal"></span>
+    <h1 class="font-display reveal" style="margin-bottom:16px;" data-i18n="ct.hero.title">Contact us.</h1>
+    <p class="reveal reveal-delay-1" style="color:var(--on-muted); font-size:17px; max-width:480px; line-height:1.6; font-weight:300;" data-i18n="ct.hero.sub">We treat every patient with the greatest care. Please feel free to reach out — our team is here for you.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="split split--7-5" style="gap:80px; align-items:start;">
+
+        <div class="reveal">
+          <h2 class="font-headline-lg" style="margin-bottom:8px;" data-i18n="ct.form.title">Request an Appointment</h2>
+          <p class="text-dim font-body-md" style="margin-bottom:36px;" data-i18n="ct.form.sub">Fill in the form and our team will contact you within 24 hours.</p>
+
+          <div class="patient-selector">
+            <button class="patient-type active" id="btn-new">
+              <span class="patient-type__label" data-i18n="ct.pt.new.label">First visit</span>
+              <span class="patient-type__title" data-i18n="ct.pt.new.title">New Patient</span>
+            </button>
+            <button class="patient-type" id="btn-existing">
+              <span class="patient-type__label" data-i18n="ct.pt.ex.label">Returning</span>
+              <span class="patient-type__title" data-i18n="ct.pt.ex.title">Existing Patient</span>
+            </button>
+          </div>
+
+          <form id="contactForm" onsubmit="handleSubmit(event);">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="voornaam" data-i18n="ct.f.firstname">First Name</label>
+                <input id="voornaam" type="text" class="form-input" data-i18n-placeholder="ct.f.firstname.ph" placeholder="John" required/>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="achternaam" data-i18n="ct.f.lastname">Last Name</label>
+                <input id="achternaam" type="text" class="form-input" data-i18n-placeholder="ct.f.lastname.ph" placeholder="Smith" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email" data-i18n="ct.f.email">Email Address</label>
+                <input id="email" type="email" class="form-input" data-i18n-placeholder="ct.f.email.ph" placeholder="john@email.com" required/>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="telefoon" data-i18n="ct.f.phone">Phone Number</label>
+                <input id="telefoon" type="tel" class="form-input" data-i18n-placeholder="ct.f.phone.ph" placeholder="+32 xxx xx xx xx"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="behandeling" data-i18n="ct.f.treatment">Type of Treatment</label>
+              <select id="behandeling" class="form-select">
+                <option value="" data-i18n="ct.f.treatment.0">— Choose a treatment —</option>
+                <option data-i18n="ct.f.treatment.1">Preventive Oral Care</option>
+                <option data-i18n="ct.f.treatment.2">Aesthetic Reconstruction / Veneers</option>
+                <option data-i18n="ct.f.treatment.3">Teeth Whitening</option>
+                <option data-i18n="ct.f.treatment.4">Implantology</option>
+                <option data-i18n="ct.f.treatment.5">Orthodontics / Invisalign</option>
+                <option data-i18n="ct.f.treatment.6">Other / Consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bericht" data-i18n="ct.f.message">Your Message</label>
+              <textarea id="bericht" class="form-textarea" data-i18n-placeholder="ct.f.message.ph" placeholder="Describe your question or wish in as much detail as possible..."></textarea>
+            </div>
+            <div class="form-group" style="display:flex; align-items:flex-start; gap:14px;">
+              <input type="checkbox" id="akkoord" required style="width:18px;height:18px;accent-color:var(--gold);flex-shrink:0;margin-top:2px;"/>
+              <label for="akkoord" style="font-size:13px; color:var(--on-muted); line-height:1.5;" data-i18n-html="ct.f.agree">I agree to the <a href="#" style="color:var(--gold); text-decoration:underline;">privacy policy</a> and give consent to the processing of my personal data.</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;" id="submitBtn" data-i18n="ct.f.submit">Request Appointment</button>
+          </form>
+          <div id="successMsg" style="display:none; margin-top:24px; background:rgba(232,194,101,0.08); border:1px solid var(--gold); padding:20px 24px;">
+            <p style="color:var(--gold); font-size:14px; font-weight:500;" data-i18n="ct.success">✓ Your request has been received. We will contact you as soon as possible.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="map-placeholder" style="height:320px; margin-bottom:40px;">
+            <div class="map-grid"></div>
+            <div class="map-pin">
+              <div class="map-pin__icon">📍</div>
+              <p class="map-pin__label">Global Smile Care<br/>Tolstraat 40, Antwerpen</p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="map-badge" data-i18n="ct.map.label">Google Maps</a>
+          </div>
+
+          <div class="info-card">
+            <svg class="info-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0z"/></svg>
+            <div>
+              <span class="info-card__label" data-i18n="ct.info.location">Location</span>
+              <div class="info-card__content">Tolstraat 40<br/>2000 Antwerpen, België</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <svg class="info-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"/></svg>
+            <div>
+              <span class="info-card__label" data-i18n="ct.info.phone">Phone</span>
+              <div class="info-card__content"><a href="tel:+3231234567">+32 (0) 3 123 45 67</a></div>
+            </div>
+          </div>
+          <div class="info-card">
+            <svg class="info-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+            <div>
+              <span class="info-card__label" data-i18n="ct.info.email">Email</span>
+              <div class="info-card__content"><a href="mailto:info@globalsmilecare.be">info@globalsmilecare.be</a></div>
+            </div>
+          </div>
+          <div class="info-card">
+            <svg class="info-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+            <div>
+              <span class="info-card__label" data-i18n="ct.info.hours">Opening Hours</span>
+              <div class="info-card__content" data-i18n-html="ct.info.hours.val">Mon – Fri: 08:30 – 18:30<br/>Saturday: 09:00 – 13:00</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></div>
+      <p class="footer__tagline" data-i18n="footer.tagline">Excellence in aesthetic and functional dentistry.</p>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col1">Practice</div>
+      <a href="behandelingen.html" class="footer__link" data-i18n="footer.link.treatments">Treatments</a>
+      <a href="praktijk.html"      class="footer__link" data-i18n="footer.link.practice">Our Practice</a>
+      <a href="team.html"          class="footer__link" data-i18n="footer.link.team">Team</a>
+      <a href="journal.html"       class="footer__link" data-i18n="footer.link.journal">Journal</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col2">Legal</div>
+      <a href="#" class="footer__link" data-i18n="footer.link.privacy">Privacy Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.terms">Terms of Service</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.cookies">Cookie Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.access">Accessibility</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col4">Social</div>
+      <a href="#" class="footer__link">Instagram</a>
+      <a href="#" class="footer__link">LinkedIn</a>
+      <a href="#" class="footer__link">Facebook</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy" data-i18n="footer.copy">© 2024 Global Smile Care. All rights reserved.</p>
+    <div class="footer__socials">
+      <a href="#" class="footer__social">Instagram</a>
+      <a href="#" class="footer__social">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/translations.js"></script>
+<script src="assets/main.js"></script>
+<script>
+  const btnNew = document.getElementById('btn-new');
+  const btnExisting = document.getElementById('btn-existing');
+  [btnNew, btnExisting].forEach(btn => {
+    btn.addEventListener('click', () => {
+      btnNew.classList.remove('active');
+      btnExisting.classList.remove('active');
+      btn.classList.add('active');
+    });
+  });
+  function handleSubmit(e) {
+    e.preventDefault();
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.textContent = '✓';
+    submitBtn.disabled = true;
+    document.getElementById('contactForm').style.opacity = '0.4';
+    document.getElementById('successMsg').style.display = 'block';
+  }
+</script>
+</body>
+</html>

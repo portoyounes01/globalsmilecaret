@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Smile Care | Heritage Clinical Excellence – Your Dentist in Antwerp</title>
+  <meta name="description" content="Global Smile Care – where medical excellence and aesthetic perfection unite. Private dentistry in Antwerp-South with a focus on timeless results."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    .hero { height: 100svh; }
+    .hero__bg img { object-position: 65% center; }
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .pillar { padding: 52px 44px; border-right: 1px solid var(--outline-dim); position: relative; }
+    .pillar:last-child { border-right: none; }
+    .pillar__line { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .pillar__dash  { width: 32px; height: 1px; background: var(--gold); }
+    .pillar__title { font-family: 'EB Garamond', serif; font-size: 22px; font-weight: 600; }
+    .pillar__body  { color: var(--on-muted); font-size: 15px; line-height: 1.7; }
+    .filter-pill { padding: 9px 22px; border: 1px solid var(--outline-dim); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; color: var(--on-muted); cursor: pointer; transition: all 0.25s; }
+    .filter-pill.active, .filter-pill:hover { background: var(--gold); border-color: var(--gold); color: #1a1200; }
+    @media (max-width: 768px) {
+      .pillars { grid-template-columns: 1fr; }
+      .pillar  { border-right: none; border-bottom: 1px solid var(--outline-dim); }
+      .pillar:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body data-page="home">
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/logo.png" alt="Global Smile Care"/>
+    </a>
+    <div class="nav__links">
+      <a href="behandelingen.html" class="nav__link" data-i18n="nav.treatments">Treatments</a>
+      <a href="praktijk.html"      class="nav__link" data-i18n="nav.practice">Our Practice</a>
+      <a href="team.html"          class="nav__link" data-i18n="nav.team">Team</a>
+      <a href="journal.html"       class="nav__link" data-i18n="nav.journal">Journal</a>
+      <a href="contact.html"       class="nav__link" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary nav__cta" data-i18n="nav.cta">Book Appointment</a>
+    <button class="nav__hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile-menu">
+    <a href="behandelingen.html" class="nav__mobile-link" data-i18n="nav.treatments">Treatments</a>
+    <a href="praktijk.html"      class="nav__mobile-link" data-i18n="nav.practice">Our Practice</a>
+    <a href="team.html"          class="nav__mobile-link" data-i18n="nav.team">Team</a>
+    <a href="journal.html"       class="nav__mobile-link" data-i18n="nav.journal">Journal</a>
+    <a href="contact.html"       class="nav__mobile-link" data-i18n="nav.contact">Contact</a>
+    <div class="lang-switcher" style="width:fit-content;">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="nl">NL</button>
+    </div>
+    <a href="contact.html" class="btn btn-primary" style="justify-content:center; margin-top:8px;" data-i18n="nav.mobile.cta">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__bg">
+    <img src="assets/images/hero_smile_portrait.png" alt="Global Smile Care hero portrait"/>
+  </div>
+  <div class="hero__content" style="padding-left:var(--pad-x); max-width:1280px; width:100%;">
+    <span class="hero__eyebrow" data-i18n="home.hero.eyebrow">Heritage Clinical Excellence</span>
+    <h1 class="font-display hero__title" data-i18n-html="home.hero.title">Your smile,<br/>our care.</h1>
+    <p class="hero__sub" data-i18n="home.hero.sub">Precision, aesthetics and personal attention — in the heart of Antwerp-South.</p>
+    <div class="hero__actions">
+      <a href="behandelingen.html" class="btn btn-primary" data-i18n="home.hero.btn1">Our Treatments</a>
+      <a href="contact.html"       class="btn btn-ghost"   data-i18n="home.hero.btn2">Book an Appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar__inner">
+    <div class="trust-bar__item" data-i18n="home.trust.1">Aesthetic Perfection</div>
+    <div class="trust-bar__item" data-i18n="home.trust.2">Certified Experts</div>
+    <div class="trust-bar__item" data-i18n="home.trust.3">Pain-Free Treatment</div>
+    <div class="trust-bar__item" data-i18n="home.trust.4">Bespoke Care Plan</div>
+    <div class="trust-bar__item" data-i18n="home.trust.5">Modern Technology</div>
+  </div>
+</div>
+
+<!-- 01 INTRO -->
+<section class="section" style="position:relative; overflow:hidden;">
+  <div class="watermark" style="right:-2%; top:0; left:auto;">01</div>
+  <div class="container">
+    <div class="split split--5-7" style="gap:80px;">
+      <div class="bracket-frame reveal">
+        <img src="assets/images/dental_clinic_interior.png" alt="Global Smile Care practice interior" style="width:100%; aspect-ratio:4/5; object-fit:cover; filter:grayscale(0.85);"/>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <span class="gold-rule"></span>
+        <h2 class="font-headline-xl" style="margin-bottom:24px;" data-i18n-html="home.intro.title">A love for<br/>the craft.</h2>
+        <p class="font-body-lg text-muted" style="margin-bottom:20px;" data-i18n="home.intro.p1">At Global Smile Care we combine decades of medical expertise with a refined aesthetic vision. Our clinic is designed as a place of calm, where precision and comfort come together.</p>
+        <p class="font-body-md text-dim italic" style="margin-bottom:40px;" data-i18n="home.intro.p2">"We believe a healthy smile is the highest form of personal expression. That's why we treat every patient with the care and precision of a master architect."</p>
+        <div class="stats-row">
+          <div class="stats-row__item">
+            <span class="stats-row__num" data-count="20" data-suffix="+">0+</span>
+            <span class="stats-row__label" data-i18n="home.intro.stat1.label">Years Experience</span>
+          </div>
+          <div class="stats-row__item">
+            <span class="stats-row__num" data-count="4800" data-suffix="+">0+</span>
+            <span class="stats-row__label" data-i18n="home.intro.stat2.label">Satisfied Patients</span>
+          </div>
+          <div class="stats-row__item">
+            <span class="stats-row__num" data-count="6" data-suffix="">0</span>
+            <span class="stats-row__label" data-i18n="home.intro.stat3.label">Specialists</span>
+          </div>
+        </div>
+        <a href="praktijk.html" class="btn btn-ghost btn-icon" data-i18n="home.intro.btn">Our Philosophy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 TREATMENTS -->
+<section class="section section--dark" style="position:relative; overflow:hidden;">
+  <div class="watermark" style="left:-2%; top:0;">02</div>
+  <div class="container">
+    <div style="margin-bottom:56px;" class="reveal">
+      <h2 class="font-headline-xl" style="margin-bottom:16px;" data-i18n="home.treatments.title">Our Specialisms</h2>
+      <div class="gold-rule"></div>
+      <p class="text-muted font-body-md" style="max-width:540px;" data-i18n="home.treatments.sub">From preventive care to complex aesthetic reconstructions – every journey is unique and tailored to you.</p>
+    </div>
+    <div class="grid-3" style="gap:2px; margin-bottom:40px;">
+      <div class="treatment-card reveal">
+        <div class="treatment-card__icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div>
+        <h3 class="font-headline-md treatment-card__title" data-i18n-html="home.card1.title">Cosmetic<br/>Dentistry</h3>
+        <p class="treatment-card__body" data-i18n="home.card1.body">Veneers, whitening and facings that create a natural harmony with your facial features.</p>
+        <a href="behandelingen.html" class="treatment-card__link" data-i18n="home.card1.link">Discover more →</a>
+      </div>
+      <div class="treatment-card reveal reveal-delay-1">
+        <div class="treatment-card__icon"><svg viewBox="0 0 24 24"><path d="M4.5 12.75l6 6 9-13.5"/></svg></div>
+        <h3 class="font-headline-md treatment-card__title" data-i18n-html="home.card2.title">High-End<br/>Implantology</h3>
+        <p class="treatment-card__body" data-i18n="home.card2.body">Titanium and zirconia implants with computer-guided navigation for seamless integration.</p>
+        <a href="behandelingen.html" class="treatment-card__link" data-i18n="home.card2.link">Discover more →</a>
+      </div>
+      <div class="treatment-card reveal reveal-delay-2">
+        <div class="treatment-card__icon"><svg viewBox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 1 0 0 4m0-4a2 2 0 1 1 0 4m-6 8a2 2 0 1 0 0-4m0 4a2 2 0 1 1 0-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 1 0 0-4m0 4a2 2 0 1 1 0-4m0 4v2m0-6V4"/></svg></div>
+        <h3 class="font-headline-md treatment-card__title" data-i18n-html="home.card3.title">Preventive<br/>Oral Care</h3>
+        <p class="treatment-card__body" data-i18n="home.card3.body">In-depth analysis and the Heritage method for a lifelong healthy smile.</p>
+        <a href="behandelingen.html" class="treatment-card__link" data-i18n="home.card3.link">Discover more →</a>
+      </div>
+    </div>
+    <div style="text-align:center;" class="reveal">
+      <a href="behandelingen.html" class="btn btn-ghost" data-i18n="home.treatments.btn">View All Treatments</a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 TEAM TEASER -->
+<section class="section" style="position:relative; overflow:hidden;">
+  <div class="watermark" style="right:-2%; bottom:0; top:auto; left:auto;">03</div>
+  <div class="container">
+    <div class="split" style="gap:80px; align-items:center;">
+      <div class="reveal">
+        <span class="font-label text-gold" style="display:block; margin-bottom:16px;" data-i18n="home.team.eyebrow">Leading Expertise</span>
+        <h2 class="font-headline-xl" style="margin-bottom:24px;" data-i18n-html="home.team.title">Meet our<br/>specialists.</h2>
+        <p class="font-body-lg text-muted" style="margin-bottom:32px;" data-i18n="home.team.body">Every member of our team is a specialist in their field, united by a shared pursuit of aesthetic perfection and patient comfort. We work exclusively by appointment for maximum attention.</p>
+        <div class="stats-row" style="margin:0 0 40px;">
+          <div class="stats-row__item">
+            <span class="stats-row__num">MSc · DDS</span>
+            <span class="stats-row__label" data-i18n="home.team.stat1.label">Qualifications</span>
+          </div>
+          <div class="stats-row__item">
+            <span class="stats-row__num">NL · EN · FR</span>
+            <span class="stats-row__label" data-i18n="home.team.stat2.label">Languages</span>
+          </div>
+          <div class="stats-row__item">
+            <span class="stats-row__num">RIZIV</span>
+            <span class="stats-row__label" data-i18n="home.team.stat3.label">Certified</span>
+          </div>
+        </div>
+        <a href="team.html" class="btn btn-ghost btn-icon" data-i18n="home.team.btn">Our Full Team</a>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="grid-2" style="gap:16px;">
+          <div class="bracket-frame" style="margin-top:40px;">
+            <img src="assets/images/doctor_portrait_male.png" alt="Dr. Alexander Van de Velde" style="width:100%; aspect-ratio:3/4; object-fit:cover; filter:grayscale(0.9);"/>
+          </div>
+          <div class="bracket-frame">
+            <img src="assets/images/doctor_portrait_female.png" alt="Drs. Sophie Dumont" style="width:100%; aspect-ratio:3/4; object-fit:cover; filter:grayscale(0.9);"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 PHILOSOPHY -->
+<section class="section section--mid" style="border-top:1px solid var(--outline-dim); border-bottom:1px solid var(--outline-dim);">
+  <div class="container">
+    <div class="reveal" style="text-align:center; margin-bottom:56px;">
+      <h2 class="font-headline-xl" data-i18n="home.philosophy.title">Our Philosophy</h2>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <div class="pillar__line"><span class="pillar__dash"></span><h3 class="pillar__title" data-i18n="home.pillar1.title">Heritage</h3></div>
+        <p class="pillar__body" data-i18n="home.pillar1.body">Our clinic follows the principles of Belgian architectural precision: form follows function, always with an eye for timeless aesthetics and trust.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__line"><span class="pillar__dash"></span><h3 class="pillar__title" data-i18n="home.pillar2.title">Innovation</h3></div>
+        <p class="pillar__body" data-i18n="home.pillar2.body">We continually invest in digital techniques such as CAD/CAM, 3D scanning and digital smile design for a flawless, predictable experience.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__line"><span class="pillar__dash"></span><h3 class="pillar__title" data-i18n="home.pillar3.title">Discretion</h3></div>
+        <p class="pillar__body" data-i18n="home.pillar3.body">Privacy and calm are central. We work exclusively by appointment in an exclusive, serene environment that radiates peace and trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band__inner">
+    <div>
+      <div class="cta-band__title" data-i18n="home.cta.title">Ready for a transformation?</div>
+      <div class="cta-band__sub"   data-i18n="home.cta.sub">Reserve your private consultation today</div>
+    </div>
+    <a href="contact.html" class="btn btn-primary" data-i18n="home.cta.btn">Plan an Appointment</a>
+  </div>
+</div>
+
+<!-- 06 JOURNAL PREVIEW -->
+<section class="section section--dark">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:52px;" class="reveal">
+      <div>
+        <h2 class="font-headline-xl" style="margin-bottom:16px;" data-i18n="home.journal.title">The Journal</h2>
+        <div class="gold-rule" style="margin:0;"></div>
+      </div>
+      <a href="journal.html" class="btn-text font-label" data-i18n="home.journal.viewall">All Articles</a>
+    </div>
+    <div class="grid-2">
+      <article class="journal-card reveal">
+        <div class="journal-card__img"><img src="assets/images/veneer_closeup.png" alt="Porcelain Veneers article"/></div>
+        <span class="journal-card__cat font-label" data-i18n="home.journal.art1.cat">Technology</span>
+        <h3 class="journal-card__title font-headline-md" data-i18n="home.journal.art1.title">The Future of Porcelain Veneers</h3>
+        <p class="journal-card__body" data-i18n="home.journal.art1.body">Discover how new composite materials deliver an even more natural and lasting result for your smile...</p>
+      </article>
+      <article class="journal-card reveal reveal-delay-2">
+        <div class="journal-card__img"><img src="assets/images/dental_clinic_interior.png" alt="Rest and care article"/></div>
+        <span class="journal-card__cat font-label" data-i18n="home.journal.art2.cat">Lifestyle</span>
+        <h3 class="journal-card__title font-headline-md" data-i18n="home.journal.art2.title">Why Calm is the Key to Care</h3>
+        <p class="journal-card__body" data-i18n="home.journal.art2.body">Our clinic is built on the conviction that a relaxed patient is the foundation for a successful treatment...</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 07 LOCATION -->
+<section class="section" style="background:#000; border-top:1px solid rgba(232,194,101,0.12);">
+  <div class="container">
+    <div class="split" style="gap:72px; align-items:start;">
+      <div class="reveal">
+        <h2 class="font-headline-xl" style="margin-bottom:48px;" data-i18n="home.location.title">Visit the Studio</h2>
+        <div style="display:flex; gap:24px; margin-bottom:36px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="flex-shrink:0; margin-top:3px;"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0z"/></svg>
+          <div>
+            <div class="font-label text-gold" style="margin-bottom:8px;" data-i18n="home.location.label1">Location</div>
+            <address class="font-body-md text-muted">Tolstraat 40<br/>2000 Antwerpen, België</address>
+          </div>
+        </div>
+        <div style="display:flex; gap:24px; margin-bottom:36px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="flex-shrink:0; margin-top:3px;"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          <div>
+            <div class="font-label text-gold" style="margin-bottom:8px;" data-i18n="home.location.label2">Opening Hours</div>
+            <p class="font-body-md text-muted" data-i18n-html="home.location.hours">Mon – Fri: 08:30 – 18:30<br/>Sat: 09:00 – 13:00<br/>Sun: Closed</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:24px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" style="flex-shrink:0; margin-top:3px;"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"/></svg>
+          <div>
+            <div class="font-label text-gold" style="margin-bottom:8px;" data-i18n="home.location.label3">Direct Contact</div>
+            <p class="font-body-md text-muted">+32 (0) 3 123 45 67</p>
+            <p class="font-body-md text-muted">info@globalsmilecare.be</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2" style="flex:1;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.9!2d4.40!3d51.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6b94f5b!2sTolstraat%2040%2C%202000%20Antwerpen%2C%20Belgium!5e0!3m2!1sen!2sbe!4v1"
+          width="100%"
+          height="360"
+          style="border:0; filter:grayscale(1) invert(0.9) contrast(1.1); opacity:0.85;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Global Smile Care – Tolstraat 40, Antwerpen">
+        </iframe>
+        <a href="https://maps.google.com/?q=Tolstraat+40,+2000+Antwerpen,+Belgium" target="_blank" rel="noopener"
+           style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; color:var(--gold); font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:opacity 0.2s;"
+           onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0z"/></svg>
+          <span data-i18n="home.location.mapbadge">View on Google Maps</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 GOOGLE REVIEWS -->
+<section class="section section--dark" style="border-top:1px solid var(--outline-dim);">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:56px;" class="reveal">
+      <span class="font-label text-gold" style="display:block; margin-bottom:12px;" data-i18n="home.reviews.eyebrow">Google Reviews</span>
+      <h2 class="font-headline-xl" style="margin-bottom:16px;" data-i18n="home.reviews.title">What our patients say</h2>
+      <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:8px;">
+        <div style="display:flex; gap:3px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span style="font-family:'EB Garamond',serif; font-size:28px; font-weight:600; color:var(--gold);">5.0</span>
+        <span style="color:var(--on-muted); font-size:13px;" data-i18n="home.reviews.count">Based on 47 Google Reviews</span>
+      </div>
+      <a href="https://maps.google.com/?q=Global+Smile+Care+Tolstraat+40+Antwerpen" target="_blank" rel="noopener"
+         style="display:inline-flex; align-items:center; gap:6px; color:var(--gold); font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; margin-top:4px;">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" fill="#4285F4"/></svg>
+        <span data-i18n="home.reviews.link">See all reviews on Google</span>
+      </a>
+    </div>
+
+    <div class="grid-3" style="gap:24px;">
+
+      <div class="review-card reveal" style="background:var(--surface); border:1px solid var(--outline-dim); padding:32px 28px; position:relative; transition:border-color 0.3s;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+          <div style="display:flex; align-items:center; gap:14px;">
+            <div style="width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,#4285F4,#34A853); display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; color:#fff; flex-shrink:0;">S</div>
+            <div>
+              <div style="font-size:14px; font-weight:600; color:var(--on-bg);">Sarah V.</div>
+              <div style="font-size:11px; color:var(--outline); letter-spacing:0.05em;">2 weeks ago</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" style="flex-shrink:0;"><path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" fill="#4285F4"/></svg>
+        </div>
+        <div style="display:flex; gap:2px; margin-bottom:16px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p style="font-size:14px; line-height:1.7; color:var(--on-muted); font-style:italic;" data-i18n="home.review1.text">"Absolute top practice. Dr. Van de Velde took the time to fully explain every step. The result of my veneers exceeded all my expectations. I finally dare to smile again!"</p>
+      </div>
+
+      <div class="review-card reveal reveal-delay-1" style="background:var(--surface); border:1px solid var(--outline-dim); padding:32px 28px; position:relative; transition:border-color 0.3s;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+          <div style="display:flex; align-items:center; gap:14px;">
+            <div style="width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,#EA4335,#FBBC05); display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; color:#fff; flex-shrink:0;">M</div>
+            <div>
+              <div style="font-size:14px; font-weight:600; color:var(--on-bg);">Mohamed A.</div>
+              <div style="font-size:11px; color:var(--outline); letter-spacing:0.05em;">1 month ago</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" style="flex-shrink:0;"><path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" fill="#4285F4"/></svg>
+        </div>
+        <div style="display:flex; gap:2px; margin-bottom:16px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p style="font-size:14px; line-height:1.7; color:var(--on-muted); font-style:italic;" data-i18n="home.review2.text">"Professionalism at the highest level. The practice feels like a 5-star hotel — calm, clean and incredibly pleasant. My implant has been perfect for over a year. Highly recommended!"</p>
+      </div>
+
+      <div class="review-card reveal reveal-delay-2" style="background:var(--surface); border:1px solid var(--outline-dim); padding:32px 28px; position:relative; transition:border-color 0.3s;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;">
+          <div style="display:flex; align-items:center; gap:14px;">
+            <div style="width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,#34A853,#4285F4); display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; color:#fff; flex-shrink:0;">L</div>
+            <div>
+              <div style="font-size:14px; font-weight:600; color:var(--on-bg);">Lena D.</div>
+              <div style="font-size:11px; color:var(--outline); letter-spacing:0.05em;">3 months ago</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" style="flex-shrink:0;"><path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" fill="#4285F4"/></svg>
+        </div>
+        <div style="display:flex; gap:2px; margin-bottom:16px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8C265"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p style="font-size:14px; line-height:1.7; color:var(--on-muted); font-style:italic;" data-i18n="home.review3.text">"I had been looking for a good dentist in Antwerp for years. Dr. Dumont immediately put me at ease. The Invisalign treatment went smoothly and the result is stunning. Thank you!"</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div>
+      <div class="footer__logo"><img src="assets/images/logo.png" alt="Global Smile Care"/></div>
+      <p class="footer__tagline" data-i18n="footer.tagline">Excellence in aesthetic and functional dentistry in the heart of Antwerp-South.</p>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col1">Practice</div>
+      <a href="behandelingen.html" class="footer__link" data-i18n="footer.link.treatments">Treatments</a>
+      <a href="praktijk.html"      class="footer__link" data-i18n="footer.link.practice">Our Practice</a>
+      <a href="team.html"          class="footer__link" data-i18n="footer.link.team">Team</a>
+      <a href="journal.html"       class="footer__link" data-i18n="footer.link.journal">Journal</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col2">Legal</div>
+      <a href="#" class="footer__link" data-i18n="footer.link.privacy">Privacy Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.terms">Terms of Service</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.cookies">Cookie Policy</a>
+      <a href="#" class="footer__link" data-i18n="footer.link.access">Accessibility</a>
+    </div>
+    <div>
+      <div class="footer__col-title" data-i18n="footer.col3">Contact</div>
+      <p class="footer__link" style="cursor:default;">Tolstraat 40</p>
+      <p class="footer__link" style="cursor:default;">2000 Antwerpen</p>
+      <a href="tel:+3231234567"            class="footer__link">+32 (0) 3 123 45 67</a>
+      <a href="mailto:info@globalsmilecare.be" class="footer__link">info@globalsmilecare.be</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy" data-i18n="footer.copy">© 2024 Global Smile Care. All rights reserved. Heritage Clinical Excellence.</p>
+    <div class="footer__socials">
+      <a href="#" class="footer__social">Instagram</a>
+      <a href="#" class="footer__social">LinkedIn</a>
+      <a href="#" class="footer__social">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/translations.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
