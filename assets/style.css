@@ -224,13 +224,58 @@ address { font-style: normal; }
   margin: 0 auto;
   padding: 0 var(--pad-x);
 }
+/* ── Nav Logo — Golden Shine ──────────────────────────────── */
+@keyframes logo-glow-pulse {
+  0%   { filter: drop-shadow(0 0 6px rgba(232,194,101,0.55)) drop-shadow(0 0 14px rgba(232,194,101,0.25)) brightness(1.05); }
+  50%  { filter: drop-shadow(0 0 14px rgba(245,217,138,0.85)) drop-shadow(0 0 28px rgba(232,194,101,0.45)) brightness(1.18); }
+  100% { filter: drop-shadow(0 0 6px rgba(232,194,101,0.55)) drop-shadow(0 0 14px rgba(232,194,101,0.25)) brightness(1.05); }
+}
+@keyframes logo-shimmer-ring {
+  0%   { box-shadow: 0 0 0 0px rgba(232,194,101,0.5); opacity:1; }
+  100% { box-shadow: 0 0 0 22px rgba(232,194,101,0); opacity:0; }
+}
+@keyframes logo-click-burst {
+  0%   { transform: scale(1);    filter: drop-shadow(0 0 6px rgba(232,194,101,0.6)) brightness(1.1); }
+  25%  { transform: scale(1.22); filter: drop-shadow(0 0 32px rgba(245,217,138,1))  brightness(1.5);  }
+  60%  { transform: scale(0.94); filter: drop-shadow(0 0 18px rgba(232,194,101,0.8)) brightness(1.2);  }
+  100% { transform: scale(1);    filter: drop-shadow(0 0 8px rgba(232,194,101,0.6))  brightness(1.1);  }
+}
+@keyframes logo-spin-shine {
+  0%   { transform: rotate(0deg)   scale(1.0); opacity:0.6; }
+  50%  { transform: rotate(180deg) scale(1.5); opacity:0;   }
+  100% { transform: rotate(360deg) scale(1.0); opacity:0;   }
+}
+
+.nav__logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav__logo::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: logo-shimmer-ring 2.4s ease-out infinite;
+}
 .nav__logo img {
   height: 44px;
   width: auto;
-  /* logo has white bg — we invert then re-adjust for dark bg */
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+  cursor: pointer;
+  /* Golden — remove white filter, use golden tint */
+  filter: drop-shadow(0 0 6px rgba(232,194,101,0.55)) drop-shadow(0 0 14px rgba(232,194,101,0.25)) brightness(1.05);
+  animation: logo-glow-pulse 2.4s ease-in-out infinite;
+  transition: transform 0.15s ease;
+  will-change: filter, transform;
 }
+.nav__logo img:hover {
+  transform: scale(1.07);
+}
+.nav__logo img.logo-clicked {
+  animation: logo-click-burst 0.55s cubic-bezier(0.36,0.07,0.19,0.97) forwards;
+}
+
 .nav__links {
   display: flex;
   align-items: center;

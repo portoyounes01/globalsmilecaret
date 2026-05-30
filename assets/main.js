@@ -166,4 +166,51 @@ document.addEventListener('DOMContentLoaded', () => {
     if (link.getAttribute('href') === currentPage) link.classList.add('active');
   });
 
+  // ── Logo Golden Click Animation ───────────────────────────
+  const logoImg = document.querySelector('.nav__logo img');
+  if (logoImg) {
+    logoImg.addEventListener('click', (e) => {
+      // CSS burst animation
+      logoImg.classList.remove('logo-clicked');
+      void logoImg.offsetWidth; // reflow to restart
+      logoImg.classList.add('logo-clicked');
+      logoImg.addEventListener('animationend', () => {
+        logoImg.classList.remove('logo-clicked');
+      }, { once: true });
+      // Particle burst
+      spawnGoldParticles(e.clientX, e.clientY);
+    });
+  }
+
 });
+
+// ── Gold Particle Burst ─────────────────────────────────────
+function spawnGoldParticles(x, y) {
+  const colors = ['#E8C265','#F5D98A','#FFF0A0','#B8963E','#FFFBE0'];
+  const count  = 22;
+  for (let i = 0; i < count; i++) {
+    const dot = document.createElement('span');
+    dot.style.cssText = `
+      position:fixed; pointer-events:none; z-index:9999;
+      border-radius:50%;
+      left:${x}px; top:${y}px;
+      width:${4 + Math.random() * 7}px;
+      height:${4 + Math.random() * 7}px;
+      background:${colors[Math.floor(Math.random() * colors.length)]};
+      box-shadow:0 0 6px 2px rgba(232,194,101,0.7);
+      transform:translate(-50%,-50%); opacity:1;
+    `;
+    document.body.appendChild(dot);
+    const angle    = (Math.PI * 2 / count) * i + (Math.random() - 0.5) * 0.6;
+    const speed    = 80 + Math.random() * 140;
+    const tx       = Math.cos(angle) * speed;
+    const ty       = Math.sin(angle) * speed;
+    const duration = 500 + Math.random() * 350;
+    dot.animate([
+      { transform: `translate(-50%,-50%) scale(1)`, opacity: 1 },
+      { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(0)`, opacity: 0 }
+    ], { duration, easing: 'cubic-bezier(0,.9,.57,1)', fill: 'forwards' }
+    ).onfinish = () => dot.remove();
+  }
+}
+
